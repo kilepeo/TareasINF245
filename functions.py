@@ -19,7 +19,7 @@ def binary(select):
     for number in select:
        total += int(number) * (2**size)
        size -=1
-    print("Te has movido: " + str(total) + " pasos!")
+    return total
 
 #De octadecimal a decimal, la misma wea pero trabajas con base 8
 def octadecimal(select):
@@ -28,7 +28,7 @@ def octadecimal(select):
     for number in select:
         total += int(number) * (8**size)
         size -=1
-    print("Te has movido: " + str(total) + " pasos!")
+    return total
 
 #Aquí no me juzgues, no se me ocurrio otra forma que poner millones de elifs, si sabes otra forma PORFAVOR OPTIMIZA ESTA ASQUEROSIDAD, se ve horrendo
 #Pero basicamente cuando es las letras, las convierte altiro a decimal con un auxiliar y las multiplica por 16 y el tamaño que lo sacamos como antes
@@ -58,4 +58,9 @@ def hexadecimal(select):
             aux = 15
             total += aux * (16**size)
         size -= 1
-    print("Te has movido: " + str(total) + " pasos!")
+    return total
+
+
+#decimal_to_binary(hack_num)
+#decimal_to_octadecimal(hack_num)
+#decimal_to_hexadecimal(hack_num)
